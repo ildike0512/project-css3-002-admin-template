@@ -8,48 +8,80 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Header. -->
     <header class="header--dark">
       <h3 class="header__title">Admin Page</h3>
       <div class="header__search">
-        <form action="/action_page.php">
-          <input class="search__input" type="text" placeholder="Search for.." />
-          <button class="search__btn" type="submit">
-            <i class="fa fa-search"></i>
-          </button>
-        </form>
+        <input type="text" class="search__input" />
+        <button class="search__btn">
+          <i class="fa fa-search"></i>
+        </button>
       </div>
     </header>
-    <main class="container">
-      
+    <!-- Main. -->
+    <main>
+      <aside>
+        <nav class="main__nav">
+          <ul class="nav__ul">
+            <li class="nav__header">CORE</li>
+            <li><i class="fa fa-tachometer"></i>Dashboard</li>
+            <li class="nav__header">INTERFACE</li>
+            <li><i class="fa fa-windows"></i>Layouts</li>
+            <li><i class="fa fa-bookmark"></i>Pages</li>
+            <li class="nav__header">Actions</li>
+            <li><i class="fa fa-area-chart">Charts</i></li>
+            <li><i class="fa fa-table"></i>Tables</li>
+          </ul>
+        </nav>
+      </aside>
+      <section class="content">
+        <h1>Dashboard</h1>
 
-      <div>
-        <aside class="nav_bar">
-          <nav class="main__nav">
-            <ul class="nav__ul">
-              <li>CORE</li>
-              <li><i class="fa fa-tachometer"></i>Dashboard</li>
-              <li>INTERFACE</li>
-              <li><i class="fa fa-windows"></i>Layouts</li>
-              <li><i class="fa fa-bookmark"></i>Pages</li>
-              <li>ADDONS</li>
-              <li><i class="fa fa-area-chart">Charts</i></li>
-              <li><i class="fa fa-table"></i>Tables</li>
-            </ul>
-          </nav>
-        </aside>
-        <section class="content">
-          <h1 class="title">Dashboard</h1> <br>
-          <div class="main_breadcrumb">Dashboard</div>
-            <div class="main__cards">
-              <div class="main__card--blue">Primary Card <br> View Details</div>
-            <div class="main__card--yellow">Warning Card <br> View Details</div>
-            <div class="main__card--green">Succes Card <br> View Details</div>
-            <div class="main__card--red">Danger Card <br> View Details</div>
-            
-            
+        <div class="main__breadcrumb">Dashboard</div>
+<div class="main__cards">
+        <div class="">
+          <div class="main__card main__card--blue">
+            <div class="card__top">Primary Card</div>
+            <div class="card__bottom">
+              View Details
+              <i class="fa fa-angle-right"></i>
+            </div>
           </div>
-        </section>
-      </div>
+        </div>
+<div class="">
+   <div class="main__card main__card--yellow">
+          <div class="card__top">Warning Card</div>
+          <div class="card__bottom">
+            View Details
+            <i class="fa fa-angle-right"></i>
+          </div>
+        </div>
+</div>
+
+              <div class="">
+                 <div class="main__card main__card--green">
+          <div class="card__top">Succes Card</div>
+          <div class="card__bottom">
+            View Details
+            <i class="fa fa-angle-right"></i>
+          </div>
+        </div>
+              </div>
+
+              <div class="">
+                 <div class="main__card main__card--red">
+          <div class="card__top">Danger Card</div>
+          <div class="card__bottom">
+            View Details
+            <i class="fa fa-angle-right"></i>
+          </div>
+        </div>
+              </div>
+
+       </div>
+       
+      </section>
     </main>
-  </body>
+
+      </body>
 </html>
