@@ -8,11 +8,17 @@ body {
   left: 0;
 }
 
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
 /* Header. */
 
 .header--dark {
   background-color: rgb(51, 57, 64);
   color: rgb(236, 236, 236);
+  padding: 1rem 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,7 +28,13 @@ body {
 .header__title {
   display: inline;
   font-size: 1.25rem;
-  padding-left: 1.2rem;
+  padding: 1.2rem 1.2rem;
+}
+
+.header__title i {
+  color: rgb(100, 100, 100);
+  display: inline;
+  padding-left: 90px;
 }
 
 .header__search {
@@ -40,9 +52,10 @@ body {
   margin-right: -3px;
   outline: none;
   transition: border-color 0.15s;
+  position: relative;
 }
 .search__input:focus {
-  border-color: rgb(128, 189, 255);
+  border: 1px solid rgb(128, 189, 255);
 }
 
 .search__btn {
@@ -55,6 +68,7 @@ body {
   color: rgb(236, 236, 236);
   cursor: pointer;
   margin-left: -1px;
+  margin-right: 1rem;
 }
 
 /* Main. */
@@ -71,12 +85,49 @@ aside {
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 700px) {
+  aside {
+    flex: 20%;
+  }
+}
+
 .nav__header {
   text-transform: uppercase;
 }
 
-.nav__ul {
+nav li {
   list-style-type: none;
+}
+
+.nav__ul {
+  color: rgb(253, 253, 253);
+  padding: 1rem;
+}
+
+.nav__ul li p {
+  font-variant-caps: all-petite-caps;
+  color: rgb(100, 100, 100);
+  line-height: 3.5rem;
+}
+
+.nav__ul li a {
+  color: rgb(100, 100, 100);
+  line-height: 3rem;
+  text-decoration: none;
+}
+
+.nav__ul li a:hover {
+  color: rgb(253, 253, 253);
+}
+
+.nav__ul li a span {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  .nav__ul li a span {
+    display: inline;
+  }
 }
 
 .content {
@@ -87,59 +138,88 @@ aside {
 .main__breadcrumb {
   background-color: rgb(233, 236, 239);
   border-radius: 0.25rem;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 1.5rem;
+  margin: 0 0 1rem 0;
+}
+
+@media screen and (min-width: 700px) {
+  .main__cards {
+    display: inline-block;
+    flex-flow: row wrap; 
+  }
 }
 
 .main__cards {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .main__card {
-  flex-basis: 100%;
-  margin: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
   color: rgb(236, 236, 236);
-}
-
-.main__card:first-child {
-  margin-left: 0;
-}
-.main__card:last-child {
-  margin-right: 0;
+  max-width: 23%;
+  flex: 0 0 100%;
+  margin: 0.5rem 0 0 0;
 }
 
 .main__card--blue {
   background-color: rgb(0, 123, 255);
+  border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+  transition: 0.3s;
 }
-
+.main__card--blue:hover {
+  background-color: rgb(68, 158, 255);
+}
 .main__card--yellow {
   background-color: rgb(255, 193, 7);
+  border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+  transition: 0.3s;
+}
+
+.main__card--yellow:hover {
+  background-color: rgb(255, 214, 92);
 }
 
 .main__card--green {
   background-color: rgb(40, 167, 69);
+  border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+  transition: 0.3s;
+}
+
+.main__card--green:hover {
+  background-color: rgb(94, 182, 114);
 }
 
 .main__card--red {
   background-color: rgb(220, 53, 69);
+  border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+  transition: 0.3s;
+}
+
+.main__card--red:hover {
+  background-color: rgb(223, 97, 109);
 }
 .card__top {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
   padding: 1.3rem 1rem;
   font-size: 1rem;
+  width: 100%;
 }
 
 .card__bottom {
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.05);
   padding: 1.3rem 1rem;
   font-size: 0.8rem;
-  display: flex;
 }
-.card__bottom .fa {
-  margin-left: auto;
+.card__bottom i {
+  float: right;
 }
-.card__top,
-.card__bottom {
-  transition: background-color 0.3s;
+
+.angle-right {
+  float: right;
+  padding-right: 1rem;
 }
